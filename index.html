@@ -13,7 +13,19 @@
     <header>
         <h3>(Sin programa aún)</h3>
         <div class="btn-desliz-container">
-            <button>Cargar programa</button>
+
+
+
+            <form id="form-subir-archivo">
+                <label id="btn-abrir-programa" title="Abrir programa" for="subir-programa">
+                    <div id="btn-cargar-programa">Cargar programa</div>
+                </label>
+                <input type="file" name="subir-programa" id="subir-programa">
+            </form>
+
+
+
+            
             <div id="container-controles">
                 <button id="btnPlay">
                     <img src="./resources/img/play.svg" alt="play" id="imgBtnPlay">
@@ -24,7 +36,20 @@
     </header>
 
     <main>
-        <h3>cinta</h3>
+        <div id="cinta">
+            <div class="bit-container">
+                <div class="bit-simbolo">0</div>
+                <div class="cabezal-container">
+                    <img src="./resources/img/triangle.png" alt="triangle">
+                </div>
+            </div>
+            <div class="bit-container">
+                <div class="bit-simbolo">0</div>
+                <div class="cabezal-container">
+                    <img src="./resources/img/triangle.png" alt="triangle">
+                </div>
+            </div>
+        </div>
     </main>
 
     <!-- main script -->

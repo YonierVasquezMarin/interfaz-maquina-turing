@@ -23,6 +23,31 @@ header > h3 {
     justify-content: space-between;
 }
 
+input[type='file'] {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+#btn-cargar-programa {
+    background-color: #835e13;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+#form-subir-archivo {
+    display: inline-block;
+    padding: 0 4px;
+    cursor: pointer;
+}
+#form-subir-archivo label {
+    cursor: pointer;
+}
+
 #container-controles {
     display: flex;
 }
@@ -48,5 +73,28 @@ main {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+}
+
+#cinta {
+    display: flex;
+}
+
+.bit-container {
+    width: 3.6rem;
+}
+
+.bit-simbolo {
+    height: 3.6rem;
+    width: 3.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+}
+
+.cabezal-container {
+    height: 1.8rem;
+    display: flex;
     justify-content: center;
 }
