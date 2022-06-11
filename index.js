@@ -1,0 +1,1 @@
+console.log('funciona desde index.js');

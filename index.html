@@ -1,12 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maquina de Turing</title>
+    <link href="./styles.css" rel="stylesheet">
 </head>
+
 <body>
-    <h1>Maquina Turing</h1>
+    <header>
+        <h3>(Sin programa aún)</h3>
+        <div class="btn-desliz-container">
+            <button>Cargar programa</button>
+            <div id="container-controles">
+                <button id="btnPlay">
+                    <img src="./resources/img/play.svg" alt="play" id="imgBtnPlay">
+                </button>
+                <input type="range" id="reguladorVelocidad" min="1" max="20" step="1" value="1">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h3>cinta</h3>
+    </main>
+
+    <!-- main script -->
+    <script src="./index.js"></script>
 </body>
+
 </html>
