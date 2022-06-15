@@ -1,4 +1,4 @@
-import {Cinta} from "./cinta.model.js"
+import { Cinta } from "./cinta.model.js";
 
 console.log("funciona desde index.js");
 
@@ -12,28 +12,30 @@ function leerArchivo(e) {
   var lector = new FileReader();
   lector.onload = function (e) {
     var contenido = e.target.result;
-    mostrarContenido(contenido);
+    //mostrarContenido(contenido);
+    let cinta = new Cinta(contenido);
   };
   lector.readAsText(archivo);
 }
 
+/*
 function mostrarContenido(contenido) {
   var elemento = document.getElementById("cinta");
   console.log("cargando programa:", contenido);
 
   let arraycinta = contenido.split("");
-
+  
   arraycinta.forEach((element) => {
     crearCelda(element);
   });
-
-  let cinta = new Cinta(contenido)
+  
 
   console.log(cinta);
 
   var programa = document.getElementById("programa");
   programa.innerHTML = "¡Programa Cargado!";
 }
+*/
 
 function crearCelda(valor) {
   let celda = `<div class="bit-container">
@@ -49,7 +51,3 @@ function crearCelda(valor) {
 document
   .getElementById("subir-programa")
   .addEventListener("change", leerArchivo, false);
-
-
-
-
