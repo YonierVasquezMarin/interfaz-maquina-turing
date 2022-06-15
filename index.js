@@ -3,7 +3,7 @@ import { Cinta } from "./cinta.model.js";
 console.log("funciona desde index.js");
 
 let contenedorCinta = document.getElementById("cinta");
-let cinta = new Cinta();
+let cinta
 
 function leerArchivo(e) {
   var archivo = e.target.files[0];
@@ -13,10 +13,9 @@ function leerArchivo(e) {
   var lector = new FileReader();
   lector.onload = function (e) {
     var contenido = e.target.result;
-    //mostrarContenido(contenido);
     var programa = document.getElementById("programa");
     programa.innerHTML = "¡Programa Cargado!";
-  cinta = new Cinta(contenido)
+    cinta = new Cinta(contenido)
   };
   lector.readAsText(archivo);
 }
@@ -29,21 +28,21 @@ document
 
 let ejecutar = document.getElementById("play")
 
-  ejecutar.addEventListener('click',()=>{
-    
-    
-    
-    console.log("text");
-
-ejecutarPrograma()
-
-  })
+ejecutar.addEventListener('click', () => {
 
 
 
+  console.log("text");
 
-function ejecutarPrograma(){
-  let repetir=cb=>{
+  ejecutarPrograma()
+
+})
+
+
+
+
+function ejecutarPrograma() {
+  let repetir = cb => {
 
   }
 }

@@ -1,35 +1,48 @@
 import { Simbolo } from "./simbolo.model.js";
 
 export class Cinta {
-  #cinta;
-  #listaSimbolos = [];
+    #bitApuntado = 0
+    #cinta;
+    #listaSimbolos = [];
 
-  constructor(cintaPrograma) {
-    this.#cinta = cintaPrograma;
-    this.iniciarCinta();
-    this.renderCinta();
-  }
-
-  iniciarCinta() {
-    for (let i = 0; i < this.#cinta.length; i++) {
-      const caracter = this.#cinta[i];
-
-      // construir el objeto Simbolo
-      let nuevoSimbolo = new Simbolo(caracter);
-      this.#listaSimbolos.push(nuevoSimbolo);
+    constructor(cintaPrograma) {
+        this.#cinta = cintaPrograma;
+        this.iniciarCinta();
+        this.renderCinta();
     }
 
-    this.#listaSimbolos[0].activarCabezal();
-  }
+    iniciarCinta() {
+        for (let i = 0; i < this.#cinta.length; i++) {
+            const caracter = this.#cinta[i];
 
-  renderCinta() {
-    let cinta = document.querySelector("#cinta");
+            // construir el objeto Simbolo
+            let nuevoSimbolo = new Simbolo(caracter);
+            this.#listaSimbolos.push(nuevoSimbolo);
+        }
 
-    for (let i = 0; i < this.#listaSimbolos.length; i++) {
-      const simbolo = this.#listaSimbolos[i];
-
-      console.log("Elemento html del simbolo");
-      cinta.appendChild(simbolo.getElementHTML());
+        this.#listaSimbolos[0].activarCabezal();
     }
-  }
+
+    renderCinta() {
+        let cinta = document.querySelector("#cinta");
+
+        for (let i = 0; i < this.#listaSimbolos.length; i++) {
+            const simbolo = this.#listaSimbolos[i];
+
+            console.log("Elemento html del simbolo");
+            cinta.appendChild(simbolo.getElementHTML());
+        }
+    }
+
+    moverCabezal(haciaDer) {
+        this.#listaSimbolos[this.#bitApuntado].desactivarCabezal()
+
+        if (haciaDer) {
+            this.#bitApuntado += 1
+        } else {
+            this.#bitApuntado -= 1
+        }
+        
+        this.#listaSimbolos[this.#bitApuntado].activarCabezal()
+    }
 }
