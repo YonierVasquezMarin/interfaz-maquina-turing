@@ -25,8 +25,6 @@ function mostrarContenido(contenido) {
     crearCelda(element);
   });
 
-  crearCelda("[ ]")
-
   var programa = document.getElementById("programa");
   programa.innerHTML = "¡Programa Cargado!";
 }
