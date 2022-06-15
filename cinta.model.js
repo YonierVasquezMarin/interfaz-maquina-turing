@@ -1,48 +1,60 @@
 import { Simbolo } from "./simbolo.model.js";
 
 export class Cinta {
-    #bitApuntado = 0
-    #cinta;
-    #listaSimbolos = [];
+  #bitApuntado = 0;
+  #cinta;
+  #listaSimbolos = [];
 
-    constructor(cintaPrograma) {
-        this.#cinta = cintaPrograma;
-        this.iniciarCinta();
-        this.renderCinta();
+  constructor(cintaPrograma) {
+    this.#cinta = cintaPrograma;
+    this.iniciarCinta();
+    this.renderCinta();
+  }
+
+  iniciarCinta() {
+    for (let i = 0; i < this.#cinta.length; i++) {
+      const caracter = this.#cinta[i];
+
+      // construir el objeto Simbolo
+      let nuevoSimbolo = new Simbolo(caracter);
+      this.#listaSimbolos.push(nuevoSimbolo);
     }
 
-    iniciarCinta() {
-        for (let i = 0; i < this.#cinta.length; i++) {
-            const caracter = this.#cinta[i];
+    this.#listaSimbolos[0].activarCabezal();
+  }
 
-            // construir el objeto Simbolo
-            let nuevoSimbolo = new Simbolo(caracter);
-            this.#listaSimbolos.push(nuevoSimbolo);
-        }
+  renderCinta() {
+    let cinta = document.querySelector("#cinta");
 
-        this.#listaSimbolos[0].activarCabezal();
+    for (let i = 0; i < this.#listaSimbolos.length; i++) {
+      const simbolo = this.#listaSimbolos[i];
+      cinta.appendChild(simbolo.getElementHTML());
+    }
+  }
+
+  moverCabezal(haciaDer) {
+    this.#listaSimbolos[this.#bitApuntado].desactivarCabezal();
+
+    if (haciaDer) {
+      this.#bitApuntado += 1;
+    } else {
+      this.#bitApuntado -= 1;
     }
 
-    renderCinta() {
-        let cinta = document.querySelector("#cinta");
+    this.#listaSimbolos[this.#bitApuntado].activarCabezal();
+  }
 
-        for (let i = 0; i < this.#listaSimbolos.length; i++) {
-            const simbolo = this.#listaSimbolos[i];
+  bitFinal() {
+    return this.#bitApuntado == this.#listaSimbolos.length - 1;
+  }
 
-            console.log("Elemento html del simbolo");
-            cinta.appendChild(simbolo.getElementHTML());
-        }
+    lecturaCabezal(){
+
+      return this.#listaSimbolos[this.#bitApuntado]
+  
     }
+    
+    
 
-    moverCabezal(haciaDer) {
-        this.#listaSimbolos[this.#bitApuntado].desactivarCabezal()
 
-        if (haciaDer) {
-            this.#bitApuntado += 1
-        } else {
-            this.#bitApuntado -= 1
-        }
-        
-        this.#listaSimbolos[this.#bitApuntado].activarCabezal()
-    }
 }

@@ -33,4 +33,8 @@ export class Simbolo {
     getElementHTML() {
         return this.#elementoHTML
     }
+
+    getSimbol(){
+        return this.simbolo
+    }
 }
