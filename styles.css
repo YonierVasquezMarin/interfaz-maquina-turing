@@ -76,7 +76,9 @@ main {
 }
 
 #cinta {
-  display: flex;
+    display: flex;
+    overflow: auto;
+    padding: 2rem;
 }
 
 .bit-container {
