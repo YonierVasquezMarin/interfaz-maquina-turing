@@ -19,7 +19,7 @@ export class Cinta {
             this.#listaSimbolos.push(nuevoSimbolo)
         }
 
-        this.#listaSimbolos[0].activarCabezal()
+        // this.#listaSimbolos[0].activarCabezal()
     }
 
     renderCinta() {
@@ -28,7 +28,8 @@ export class Cinta {
         for (let i = 0; i < this.#listaSimbolos.length; i++) {
             const simbolo = this.#listaSimbolos[i];
             
-            cinta.appendChild(simbolo)
+            console.log('Elemento html del simbolo');
+            cinta.appendChild(simbolo.getElementHTML())
         }
     }
 

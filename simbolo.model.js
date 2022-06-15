@@ -4,6 +4,7 @@ export class Simbolo {
 
     constructor(simbolo) {
         this.simbolo = simbolo
+        this.iniciarElemento()
     }
 
     iniciarElemento() {
@@ -26,6 +27,10 @@ export class Simbolo {
     }
 
     cambiarSimbolo(nuevoSimbolo) {
-        
+
+    }
+
+    getElementHTML() {
+        return this.#elementoHTML
     }
 }
