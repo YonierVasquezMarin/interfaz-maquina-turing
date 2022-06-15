@@ -28,7 +28,7 @@ function mostrarContenido(contenido) {
   crearCelda("[ ]")
 
   var programa = document.getElementById("programa");
-  programa.innerHTML = "Programa:"+contenido;
+  programa.innerHTML = "¡Programa Cargado!";
 }
 
 function crearCelda(valor) {
@@ -45,3 +45,6 @@ function crearCelda(valor) {
 document
   .getElementById("subir-programa")
   .addEventListener("change", leerArchivo, false);
+
+estado={valor,pos,dir}
+
