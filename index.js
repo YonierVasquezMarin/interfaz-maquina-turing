@@ -1,3 +1,5 @@
+import {Cinta} from "./cinta.model.js"
+
 console.log("funciona desde index.js");
 
 let contenedorCinta = document.getElementById("cinta");
@@ -19,11 +21,15 @@ function mostrarContenido(contenido) {
   var elemento = document.getElementById("cinta");
   console.log("cargando programa:", contenido);
 
-  arraycinta = contenido.split("");
+  let arraycinta = contenido.split("");
 
   arraycinta.forEach((element) => {
     crearCelda(element);
   });
+
+  let cinta = new Cinta(contenido)
+
+  console.log(cinta);
 
   var programa = document.getElementById("programa");
   programa.innerHTML = "¡Programa Cargado!";
@@ -44,5 +50,6 @@ document
   .getElementById("subir-programa")
   .addEventListener("change", leerArchivo, false);
 
-estado={valor,pos,dir}
+
+
 
