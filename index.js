@@ -13,6 +13,9 @@ function leerArchivo(e) {
   lector.onload = function (e) {
     var contenido = e.target.result;
     //mostrarContenido(contenido);
+    var programa = document.getElementById("programa");
+    programa.innerHTML = "¡Programa Cargado!";
+  
     let cinta = new Cinta(contenido);
   };
   lector.readAsText(archivo);
