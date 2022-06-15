@@ -13,7 +13,7 @@ export class Simbolo {
         bitContainer.innerHTML = `
         <div class="bit-simbolo">${this.simbolo}</div>
         <div class="cabezal-container">
-            <img class="cabezal-element" src="./resources/img/triangle.png" alt="triangle" class="pos_cabezal">
+            <img class="cabezal-element pos_cabezal" src="./resources/img/triangle.png" alt="triangle">
         </div>`
         this.#elementoHTML = bitContainer
     }
