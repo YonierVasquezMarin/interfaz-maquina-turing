@@ -1,6 +1,5 @@
 import { Cinta } from "./cinta.model.js";
-
-console.log("funciona desde index.js");
+import { MaquinaTuring } from "./maquina-turing.model.js";
 
 let contenedorCinta = document.getElementById("cinta");
 let cinta;
@@ -26,21 +25,20 @@ document
 
 let ejecutar = document.getElementById("play");
 
-ejecutar.addEventListener("click", () => {
-  console.log("text");
+ejecutar.addEventListener("click", ejecutarPrograma);
 
-  ejecutarPrograma();
-});
 
 function ejecutarPrograma() {
-  let repetir = (cb) => {
-    cinta.moverCabezal(true);
 
-    console.log(cinta.lecturaCabezal().getSimbol());
+  let mt = new MaquinaTuring(cinta)
 
-    if (!cinta.bitFinal()) {
+  let repetir = () => {
+    mt.efectuarOperacion()
+
+    if (!mt.haFinalizado()) {
       setTimeout(repetir, 500);
     }
   };
+
   repetir();
 }

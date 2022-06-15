@@ -32,7 +32,11 @@ export class Cinta {
     }
   }
 
-  moverCabezal(haciaDer) {
+  moverCabezal(haciaDer, nuevoSimbolo) {
+    // cambiar el simbolo actual
+    this.#listaSimbolos[this.#bitApuntado].cambiarSimbolo(nuevoSimbolo)
+
+    // mover cabezal
     this.#listaSimbolos[this.#bitApuntado].desactivarCabezal();
 
     if (haciaDer) {
@@ -42,19 +46,19 @@ export class Cinta {
     }
 
     this.#listaSimbolos[this.#bitApuntado].activarCabezal();
+    
   }
 
   bitFinal() {
     return this.#bitApuntado == this.#listaSimbolos.length - 1;
   }
 
-    lecturaCabezal(){
+  lecturaSimboloCabezal() {
+    return this.#listaSimbolos[this.#bitApuntado].getSimbol()
+  }
 
-      return this.#listaSimbolos[this.#bitApuntado]
-  
-    }
-    
-    
-
+  // rempSimActual(nuevoSimbolo) {
+  //   this.#listaSimbolos[this.#bitApuntado].cambiarSimbolo(nuevoSimbolo)
+  // }
 
 }

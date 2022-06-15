@@ -27,7 +27,7 @@ export class Simbolo {
     }
 
     cambiarSimbolo(nuevoSimbolo) {
-
+        this.#elementoHTML.querySelector('.bit-simbolo').innerText = nuevoSimbolo
     }
 
     getElementHTML() {
