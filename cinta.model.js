@@ -73,6 +73,10 @@ export class Cinta {
     return this.#listaSimbolos[this.#bitApuntado].getSimbol()
   }
 
+  getBitApuntado() {
+    return this.#bitApuntado;
+  }
+
   // rempSimActual(nuevoSimbolo) {
   //   this.#listaSimbolos[this.#bitApuntado].cambiarSimbolo(nuevoSimbolo)
   // }

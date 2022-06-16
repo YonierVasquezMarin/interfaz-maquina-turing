@@ -36,7 +36,7 @@ function ejecutarPrograma() {
     mt.efectuarOperacion()
 
     if (!mt.haFinalizado()) {
-      setTimeout(repetir, 500);
+      setTimeout(repetir, 200);//500
     }
   };
 

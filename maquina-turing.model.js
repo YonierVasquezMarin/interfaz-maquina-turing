@@ -73,9 +73,28 @@ export class MaquinaTuring {
                         break;
                 }
                 break
-
+            case 11:
+                switch (simboloActual) {
+                    case '0':
+                        this.#cinta.moverCabezal(true, 'X')
+                        this.estadoActual = 12
+                        break;
+                    case '1':
+                        this.#cinta.moverCabezal(true, 'X')
+                        this.estadoActual = 15
+                        break;
+                }
+                break
+            case 15:
+                switch (simboloActual) {
+                    case '1':
+                        this.#cinta.moverCabezal(false, 'X')
+                        this.estadoActual = 16
+                        break;
+                }
+                break
             // Asignar valor
-            case 5:
+            default:
                 new AsignarValor(simboloActual, this.#cinta, this)
                 break
         }
