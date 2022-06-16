@@ -17,18 +17,6 @@ export class AsignarValor {
         let mt = this.#mt
 
         switch (mt.estadoActual) {
-            case 5:
-                switch (simboloActual) {
-                    case '0':
-                        cinta.moverCabezal(true, 'X')
-                        mt.estadoActual = 18
-                        break;
-                    case '1':
-                        cinta.moverCabezal(true, 'X')
-                        mt.estadoActual = 17
-                        break;
-                }
-                break;
             case 17:
                 switch (simboloActual) {
                     case '0':

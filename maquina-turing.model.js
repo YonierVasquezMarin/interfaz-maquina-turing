@@ -1,4 +1,5 @@
 import { AsignarValor } from "./automatas/asignar-valor.js";
+import { Desplazar } from "./automatas/desplazar.js";
 
 export class MaquinaTuring {
 
@@ -93,9 +94,45 @@ export class MaquinaTuring {
                         break;
                 }
                 break
-            // Asignar valor
+            case 5:
+                switch (simboloActual) {
+                    case '0':
+                        this.#cinta.moverCabezal(true, 'X')
+                        this.estadoActual = 18
+                        break;
+                    case '1':
+                        this.#cinta.moverCabezal(true, 'X')
+                        this.estadoActual = 17
+                        break;
+                }
+                break;
+            case 7:
+                switch (simboloActual) {
+                    case '0':
+                        this.#cinta.moverCabezal(true, 'X')
+                        this.estadoActual = 8
+                        break;
+                    case '1':
+                        this.#cinta.moverCabezal(true, 'X')
+                        this.estadoActual = 9
+                        break;
+                }
+                break
+            case 8:
+                switch (simboloActual) {
+                    case '0':
+                        this.#cinta.moverCabezal(true, '0')
+                        this.estadoActual = 76
+                        break;
+                    case '1':
+                        this.#cinta.moverCabezal(true, '1')
+                        this.estadoActual = 76
+                        break;
+                }
+                break
             default:
                 new AsignarValor(simboloActual, this.#cinta, this)
+                new Desplazar(simboloActual, this.#cinta, this)
                 break
         }
     }
