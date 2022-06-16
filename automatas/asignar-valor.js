@@ -975,6 +975,10 @@ export class AsignarValor {
                         cinta.moverCabezal(true, '1')
                         mt.estadoActual = 75
                         break;
+                    case 'S':
+                        cinta.moverCabezal(true, 'S')
+                        mt.estadoActual = 75
+                        break;
                     case 'X':
                         cinta.moverCabezal(true, 'X')
                         mt.estadoActual = 2
