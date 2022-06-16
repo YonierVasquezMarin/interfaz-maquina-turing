@@ -129,6 +129,10 @@ export class Desplazar {
         }
         break;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 215704d5d994c865a1866c921778aac3340a7773
       case 392:
         switch (simboloActual) {
           case "1":
@@ -824,6 +828,7 @@ export class Desplazar {
         }
         break;
 
+<<<<<<< HEAD
       /*---------------------------------------
             Salida
             ----------------------------------------- */
@@ -849,10 +854,12 @@ export class Desplazar {
             break;
         }
         break;
+=======
+>>>>>>> 215704d5d994c865a1866c921778aac3340a7773
 
 
 
-        
+
       case 439:
         switch (simboloActual) {
           case "0":
