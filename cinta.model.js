@@ -50,14 +50,15 @@ export class Cinta {
       this.#bitApuntado += 1;
 
     } else {
+
       if (this.#bitApuntado == 0) {
         // agregar un blanco al inicio de la cinta
         let nuevoBlanco = new Simbolo('B')
         this.#listaSimbolos.unshift(nuevoBlanco)
         this.#cintaHTML.insertAdjacentElement("afterbegin", nuevoBlanco.getElementHTML())
-        this.#bitApuntado += 1
+      } else {
+        this.#bitApuntado -= 1;
       }
-      this.#bitApuntado -= 1;
     }
 
     this.#listaSimbolos[this.#bitApuntado].activarCabezal();
