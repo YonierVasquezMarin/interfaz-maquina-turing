@@ -77,7 +77,7 @@ export class Desplazar {
         }
         break;
 
-        case 388:
+      case 388:
         switch (simboloActual) {
           case "1":
             cinta.moverCabezal(true, "1");
@@ -90,106 +90,106 @@ export class Desplazar {
         }
         break;
 
-        case 389:
-            switch (simboloActual) {
-              case "1":
-                cinta.moverCabezal(true, "1");
-                this.estadoActual = 390;
-                break;
-              case "0":
-                cinta.moverCabezal(true, "0");
-                this.estadoActual = 390;
-                break;
-            }
+      case 389:
+        switch (simboloActual) {
+          case "1":
+            cinta.moverCabezal(true, "1");
+            this.estadoActual = 390;
             break;
-    
-            case 390:
-                switch (simboloActual) {
-                  case "1":
-                    cinta.moverCabezal(true, "1");
-                    this.estadoActual = 391;
-                    break;
-                  case "0":
-                    cinta.moverCabezal(true, "0");
-                    this.estadoActual = 391;
-                    break;
-                }
-                break;
-        
-                case 391:
-                    switch (simboloActual) {
-                      case "1":
-                        cinta.moverCabezal(true, "1");
-                        this.estadoActual = 421;
-                        break;
-                      case "0":
-                        cinta.moverCabezal(true, "0");
-                        this.estadoActual = 392;
-                        break;
-                    }
-                    break;
-            
-    
-                    case 392:
-                        switch (simboloActual) {
-                          case "1":
-                            cinta.moverCabezal(true, "1");
-                            this.estadoActual = 392;
-                            break;
-                          case "0":
-                            cinta.moverCabezal(true, "0");
-                            this.estadoActual = 392;
-                            break;
-                          case "S":
-                            cinta.moverCabezal(true, "S");
-                            this.estadoActual = 392;
-                            break;
-                
-                          case "X":
-                            cinta.moverCabezal(false, "X");
-                            this.estadoActual = 393;
-                            break;
-                        }
-                        break;
+          case "0":
+            cinta.moverCabezal(true, "0");
+            this.estadoActual = 390;
+            break;
+        }
+        break;
+
+      case 390:
+        switch (simboloActual) {
+          case "1":
+            cinta.moverCabezal(true, "1");
+            this.estadoActual = 391;
+            break;
+          case "0":
+            cinta.moverCabezal(true, "0");
+            this.estadoActual = 391;
+            break;
+        }
+        break;
+
+      case 391:
+        switch (simboloActual) {
+          case "1":
+            cinta.moverCabezal(true, "1");
+            this.estadoActual = 421;
+            break;
+          case "0":
+            cinta.moverCabezal(true, "0");
+            this.estadoActual = 392;
+            break;
+        }
+        break;
+
+
+      case 392:
+        switch (simboloActual) {
+          case "1":
+            cinta.moverCabezal(true, "1");
+            this.estadoActual = 392;
+            break;
+          case "0":
+            cinta.moverCabezal(true, "0");
+            this.estadoActual = 392;
+            break;
+          case "S":
+            cinta.moverCabezal(true, "S");
+            this.estadoActual = 392;
+            break;
+
+          case "X":
+            cinta.moverCabezal(false, "X");
+            this.estadoActual = 393;
+            break;
+        }
+        break;
 
 
 
-                        case 421:
-                            switch (simboloActual) {
-                              case "1":
-                                cinta.moverCabezal(true, "1");
-                                this.estadoActual = 421;
-                                break;
-                              case "0":
-                                cinta.moverCabezal(true, "0");
-                                this.estadoActual = 421;
-                                break;
-                              case "S":
-                                cinta.moverCabezal(true, "S");
-                                this.estadoActual = 421;
-                                break;
-                    
-                              case "X":
-                                cinta.moverCabezal(false, "X");
-                                this.estadoActual = 422;
-                                break;
-                            }
-                            break;
-    
+      case 421:
+        switch (simboloActual) {
+          case "1":
+            cinta.moverCabezal(true, "1");
+            this.estadoActual = 421;
+            break;
+          case "0":
+            cinta.moverCabezal(true, "0");
+            this.estadoActual = 421;
+            break;
+          case "S":
+            cinta.moverCabezal(true, "S");
+            this.estadoActual = 421;
+            break;
 
-                            case 422:
-                                switch (simboloActual) {
-                                  case "1":
-                                    cinta.moverCabezal(false, "1");
-                                    this.estadoActual = 423;
-                                    break;
-                                  case "S":
-                                    cinta.moverCabezal(false, "1");
-                                    this.estadoActual = 392;
-                                    break;
-                                }
-                                break;
-                
+          case "X":
+            cinta.moverCabezal(false, "X");
+            this.estadoActual = 422;
+            break;
+        }
+        break;
+
+
+      case 422:
+        switch (simboloActual) {
+          case "1":
+            cinta.moverCabezal(false, "1");
+            this.estadoActual = 423;
+            break;
+          case "S":
+            cinta.moverCabezal(false, "1");
+            this.estadoActual = 392;
+            break;
+        }
+        break;
+
 
     }
   }
