@@ -4,6 +4,7 @@ export class Cinta {
   #bitApuntado = 0;
   #cinta;
   #listaSimbolos = [];
+  #cintaHTML = document.querySelector('#cinta')
 
   constructor(cintaPrograma) {
     this.#cinta = cintaPrograma;
@@ -24,11 +25,9 @@ export class Cinta {
   }
 
   renderCinta() {
-    let cinta = document.querySelector("#cinta");
-
     for (let i = 0; i < this.#listaSimbolos.length; i++) {
       const simbolo = this.#listaSimbolos[i];
-      cinta.appendChild(simbolo.getElementHTML());
+      this.#cintaHTML.appendChild(simbolo.getElementHTML());
     }
   }
 
@@ -40,13 +39,29 @@ export class Cinta {
     this.#listaSimbolos[this.#bitApuntado].desactivarCabezal();
 
     if (haciaDer) {
+      let esUltimoBit = this.#bitApuntado == this.#listaSimbolos.length - 1
+
+      if (esUltimoBit) {
+        // agregar un blanco al final de la cinta
+        let nuevoBlanco = new Simbolo('B')
+        this.#listaSimbolos.push(nuevoBlanco)
+        this.#cintaHTML.appendChild(nuevoBlanco.getElementHTML())
+      }
       this.#bitApuntado += 1;
+
     } else {
+      if (this.#bitApuntado == 0) {
+        // agregar un blanco al inicio de la cinta
+        let nuevoBlanco = new Simbolo('B')
+        this.#listaSimbolos.unshift(nuevoBlanco)
+        this.#cintaHTML.insertAdjacentElement("afterbegin", nuevoBlanco.getElementHTML())
+        this.#bitApuntado += 1
+      }
       this.#bitApuntado -= 1;
     }
 
     this.#listaSimbolos[this.#bitApuntado].activarCabezal();
-    
+
   }
 
   bitFinal() {
