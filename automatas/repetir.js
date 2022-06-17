@@ -469,7 +469,7 @@ export class Repetir {
                         break;
                 }
                 break
-            case 228:
+            case 229:
                 switch (simboloActual) {
                     case '0':
                         cinta.moverCabezal(false, '0')
@@ -753,7 +753,7 @@ export class Repetir {
                         break;
                 }
                 break;
-            case 212:
+            case 218:
                 switch (simboloActual) {
                     case '0':
                         cinta.moverCabezal(false, '0')
@@ -781,7 +781,7 @@ export class Repetir {
                         break;
                     case 'B':
                         cinta.moverCabezal(false, 'B')
-                        mt.estadoActual = 214
+                        mt.estadoActual = 213
                         break;
                     case 'Z':
                         cinta.moverCabezal(true, '0')
