@@ -5,7 +5,7 @@ export class Etiqueta {
     #elementoHTML = document.querySelector('#tags')
 
     constructor() {
-        this.#elementoHTML.style.visibility = 'visible'
+        this.#elementoHTML.style.display = 'flex'
     }
 
     moverEtiqueta() {

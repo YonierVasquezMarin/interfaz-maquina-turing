@@ -14,6 +14,7 @@ export class MaquinaTuring {
     }
 
     efectuarOperacion() {
+        console.log(`Estado actual ${this.estadoActual}`);
         let simboloActual = this.#cinta.lecturaSimboloCabezal()
 
         switch (this.estadoActual) {

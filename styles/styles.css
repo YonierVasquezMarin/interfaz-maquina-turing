@@ -94,7 +94,7 @@ main {
   margin-left: 32px;
   height: 1.5rem;
   display: flex;
-  visibility: hidden;
+  display: none;
 }
 
 .tag-name {
