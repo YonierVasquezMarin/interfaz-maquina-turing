@@ -14,7 +14,7 @@ header {
   box-shadow: 0px 5px 8px #a3a2a2;
 }
 
-header > h3 {
+header>h3 {
   margin-top: 0;
 }
 
@@ -43,6 +43,7 @@ input[type="file"] {
   padding: 0 4px;
   cursor: pointer;
 }
+
 #form-subir-archivo label {
   cursor: pointer;
 }
@@ -75,10 +76,35 @@ main {
   justify-content: center;
 }
 
+#cinta-and-tags-container {
+  overflow: auto;
+  position: relative;
+}
+
 #cinta {
-    display: flex;
-    overflow: auto;
-    padding: 2rem;
+  display: flex;
+  padding: 2rem;
+}
+
+#tags {
+  background-color: #607d8b;
+  position: absolute;
+  width: 921.44px;
+  top: 0px;
+  margin-left: 32px;
+  height: 1.5rem;
+  display: flex;
+  visibility: hidden;
+}
+
+.tag-name {
+  display: flex;
+  flex-grow: 0.25;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #4c4b4b;
+  font-weight: bold;
+  color: white;
 }
 
 .bit-container {

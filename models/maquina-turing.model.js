@@ -1,7 +1,7 @@
-import { AsignarValor } from "./automatas/asignar-valor.js";
-import { Desplazar } from "./automatas/desplazar.js";
-import { ComplementoA2 } from "./automatas/complemento-a2.js";
-import { Repetir } from "./automatas/repetir.js";
+import { AsignarValor } from "../automatas/asignar-valor.js";
+import { Desplazar } from "../automatas/desplazar.js";
+import { ComplementoA2 } from "../automatas/complemento-a2.js";
+import { Repetir } from "../automatas/repetir.js";
 
 export class MaquinaTuring {
 

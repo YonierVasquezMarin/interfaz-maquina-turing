@@ -1,5 +1,6 @@
-import { Cinta } from "./cinta.model.js";
-import { MaquinaTuring } from "./maquina-turing.model.js";
+import { Cinta } from "./models/cinta.model.js";
+import { MaquinaTuring } from "./models/maquina-turing.model.js";
+
 
 let contenedorCinta = document.getElementById("cinta");
 let cinta;
