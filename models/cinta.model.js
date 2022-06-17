@@ -1,15 +1,18 @@
 import { Simbolo } from "./simbolo.model.js";
+import { Etiqueta } from "./etiqueta.model.js";
 
 export class Cinta {
   #bitApuntado = 0;
   #cinta;
   #listaSimbolos = [];
   #cintaHTML = document.querySelector('#cinta')
+  #etiqueta
 
   constructor(cintaPrograma) {
     this.#cinta = cintaPrograma;
     this.iniciarCinta();
     this.renderCinta();
+    this.#etiqueta = new Etiqueta()
   }
 
   iniciarCinta() {
@@ -39,8 +42,8 @@ export class Cinta {
     this.#listaSimbolos[this.#bitApuntado].desactivarCabezal();
 
     if (haciaDer) {
-      let esUltimoBit = this.#bitApuntado == this.#listaSimbolos.length - 1
 
+      let esUltimoBit = this.#bitApuntado == this.#listaSimbolos.length - 1
       if (esUltimoBit) {
         // agregar un blanco al final de la cinta
         let nuevoBlanco = new Simbolo('B')
@@ -56,9 +59,11 @@ export class Cinta {
         let nuevoBlanco = new Simbolo('B')
         this.#listaSimbolos.unshift(nuevoBlanco)
         this.#cintaHTML.insertAdjacentElement("afterbegin", nuevoBlanco.getElementHTML())
+        this.#etiqueta.moverEtiqueta()
       } else {
         this.#bitApuntado -= 1;
       }
+
     }
 
     this.#listaSimbolos[this.#bitApuntado].activarCabezal();
@@ -76,9 +81,5 @@ export class Cinta {
   getBitApuntado() {
     return this.#bitApuntado;
   }
-
-  // rempSimActual(nuevoSimbolo) {
-  //   this.#listaSimbolos[this.#bitApuntado].cambiarSimbolo(nuevoSimbolo)
-  // }
 
 }

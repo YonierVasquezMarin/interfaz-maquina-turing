@@ -1,7 +1,8 @@
-import { AsignarValor } from "./automatas/asignar-valor.js";
-import { Desplazar } from "./automatas/desplazar.js";
-import { ComplementoA2 } from "./automatas/complemento-a2.js";
-import { Repetir } from "./automatas/repetir.js";
+import { AsignarValor } from "../automatas/asignar-valor.js";
+import { Desplazar } from "../automatas/desplazar.js";
+import { ComplementoA2 } from "../automatas/complemento-a2.js";
+import { Repetir } from "../automatas/repetir.js";
+import { FinRepetir } from "../automatas/fin-repetir.js";
 
 export class MaquinaTuring {
 
@@ -168,11 +169,20 @@ export class MaquinaTuring {
                         break;
                 }
                 break
+            case 10:
+                switch (simboloActual) {
+                    case 'Y':
+                        this.#cinta.moverCabezal(false, 'Y')
+                        this.estadoActual = 231
+                        break;
+                }
+                break
             default:
                 new AsignarValor(simboloActual, this.#cinta, this)
                 new Desplazar(simboloActual, this.#cinta, this)
                 new ComplementoA2(simboloActual, this.#cinta, this)
                 new Repetir(simboloActual, this.#cinta, this)
+                new FinRepetir(simboloActual, this.#cinta, this)
                 break
         }
     }

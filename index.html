@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maquina de Turing</title>
-    <link href="./styles.css" rel="stylesheet">
+    <link href="./styles/styles.css" rel="stylesheet">
 </head>
 
 <body>
@@ -31,10 +31,24 @@
     </header>
 
     <main>
-        <div id="cinta"></div>
+        <div id="cinta-and-tags-container">
+
+            <!-- Cinta del programa -->
+            <div id="cinta"></div>
+
+            <!-- Etiquetas para los nombres de las variables -->
+            <div id="tags">
+                <div class="tag-name">A</div>
+                <div class="tag-name">B</div>
+                <div class="tag-name">C</div>
+                <div class="tag-name">T</div>
+            </div>
+
+        </div>
     </main>
 
     <!-- main script -->
     <script src="./index.js" type="module"></script>
 </body>
+
 </html>
