@@ -3,6 +3,7 @@ import { Desplazar } from "../automatas/desplazar.js";
 import { ComplementoA2 } from "../automatas/complemento-a2.js";
 import { Repetir } from "../automatas/repetir.js";
 import { FinRepetir } from "../automatas/fin-repetir.js";
+import { Sumar } from "../automatas/sumar.js";
 
 export class MaquinaTuring {
 
@@ -184,6 +185,7 @@ export class MaquinaTuring {
                 new ComplementoA2(simboloActual, this.#cinta, this)
                 new Repetir(simboloActual, this.#cinta, this)
                 new FinRepetir(simboloActual, this.#cinta, this)
+                new Sumar(simboloActual, this.#cinta, this)
                 break
         }
     }
