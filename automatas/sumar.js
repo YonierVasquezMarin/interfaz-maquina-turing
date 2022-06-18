@@ -1,4 +1,4 @@
-export class Desplazar {
+export class Sumar {
   #simboloActual;
   #cinta;
   #mt;
