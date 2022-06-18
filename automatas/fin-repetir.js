@@ -1485,7 +1485,7 @@ export class FinRepetir {
                         break;
                     case 'B':
                         cinta.moverCabezal(false, 'B')
-                        mt.estadoActual = 348
+                        mt.estadoActual = 351
                         break;
                 }
                 break
@@ -1493,15 +1493,15 @@ export class FinRepetir {
                 switch (simboloActual) {
                     case '0':
                         cinta.moverCabezal(false, '0')
-                        mt.estadoActual = 350
+                        mt.estadoActual = 351
                         break;
                     case '1':
                         cinta.moverCabezal(false, '1')
-                        mt.estadoActual = 350
+                        mt.estadoActual = 351
                         break;
                     case 'B':
                         cinta.moverCabezal(false, 'B')
-                        mt.estadoActual = 348
+                        mt.estadoActual = 351
                         break;
                     case 'X':
                         cinta.moverCabezal(false, 'X')

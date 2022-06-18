@@ -473,24 +473,20 @@ export class Repetir {
                 switch (simboloActual) {
                     case '0':
                         cinta.moverCabezal(false, '0')
-                        mt.estadoActual = 230
+                        mt.estadoActual = 229
                         break;
                     case '1':
                         cinta.moverCabezal(false, '1')
-                        mt.estadoActual = 230
+                        mt.estadoActual = 229
                         break;
                     case 'B':
                         cinta.moverCabezal(false, 'B')
-                        mt.estadoActual = 230
+                        mt.estadoActual = 229
                         break;
                     case 'Y':
                         cinta.moverCabezal(false, 'Y')
-                        mt.estadoActual = 230
+                        mt.estadoActual = 229
                         break;
-                }
-                break
-            case 230:
-                switch (simboloActual) {
                     case 'X':
                         cinta.moverCabezal(false, 'X')
                         mt.estadoActual = 2
@@ -769,19 +765,19 @@ export class Repetir {
                 switch (simboloActual) {
                     case '0':
                         cinta.moverCabezal(false, '0')
-                        mt.estadoActual = 213
+                        mt.estadoActual = 219
                         break;
                     case '1':
                         cinta.moverCabezal(false, '1')
-                        mt.estadoActual = 213
+                        mt.estadoActual = 219
                         break;
                     case 'Y':
                         cinta.moverCabezal(false, 'Y')
-                        mt.estadoActual = 213
+                        mt.estadoActual = 219
                         break;
                     case 'B':
                         cinta.moverCabezal(false, 'B')
-                        mt.estadoActual = 213
+                        mt.estadoActual = 219
                         break;
                     case 'Z':
                         cinta.moverCabezal(true, '0')
